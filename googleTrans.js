@@ -136,19 +136,7 @@ console.log(english);
         console.log(url2);
     } while ('' == url2);
     // await page.goto(url2);
-    await page.waitFor(1000);
-
-    // 模拟鼠标点击“speaker”按钮对象
-    await englishSpeaker.click();  
-    do 
-    {        
-        await page.waitFor(500);  // 等待500ms
-        console.log(url2);
-    } while ('' == url2);
-    // await page.goto(url2);
-    await page.waitFor(1000);
-
-    
+    await page.waitFor(1000);    
     
     //await page.waitFor('video[name=media]');
     //await page.focus('video[name=media]');
