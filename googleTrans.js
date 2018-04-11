@@ -99,15 +99,15 @@ console.log(english);
     const write_mp3 = async function(response) {
       const buffer = await response.buffer();
        let filename = 'd:\\tmp.mp3';
-                  fs.writeFileSync(filename, buffer);
-                  console.log("write to d:tmp.mp3");
+       fs.writeFileSync(filename, buffer);
+       console.log("write to d:tmp.mp3");
     }
     // response_fun function
     const response_fun = async function() {
     var response_bkup;
     await page.on('response', response => {
     const url_res = response.url();
-    if (!url_res.startsWith('data:') && response.ok) {
+    if (!url_res.startsWith('data:') && response.ok && !url_res.startsWith('play') && url_res.startsWith('translate')) {
       response.buffer().then(
         b => {
           console.log(`${response.status()} ${url_res} ${b.length} bytes`);
@@ -138,6 +138,18 @@ console.log(english);
     // await page.goto(url2);
     await page.waitFor(1000);
 
+    // 模拟鼠标点击“speaker”按钮对象
+    await englishSpeaker.click();  
+    do 
+    {        
+        await page.waitFor(500);  // 等待500ms
+        console.log(url2);
+    } while ('' == url2);
+    // await page.goto(url2);
+    await page.waitFor(1000);
+
+    
+    
     //await page.waitFor('video[name=media]');
     //await page.focus('video[name=media]');
 
