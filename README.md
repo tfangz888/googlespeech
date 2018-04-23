@@ -25,6 +25,7 @@ gcloud iam service-accounts keys create key.json --iam-account=speech@speechwave
 linux:
 export GOOGLE_APPLICATION_CREDENTIALS=key.json
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/service-account-file.json"
+
 windows:
 powershell
 $env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\username\Downloads\[FILE_NAME].json"
