@@ -10,10 +10,15 @@ the dependecy is windows notejs and puppeteer.
 https://cloud.google.com/text-to-speech/docs/quickstart
 https://cloud.google.com/text-to-speech/docs/create-audio
 https://cloud.google.com/sdk/docs/quickstart-linux
+
 gcloud init --console-only
+
 必需建立服务帐号
+
 gcloud iam service-accounts create speech  #如果已经存在，则不需要此步骤
+
 # 此步不一定必要。 gcloud projects add-iam-policy-binding [PROJECT_ID] --member "serviceAccount:[NAME]@[PROJECT_ID].iam.gserviceaccount.com" --role "roles/owner"
+
 gcloud iam service-accounts keys create key.json --iam-account=speech@speechwavenet.iam.gserviceaccount.com
 
 环境变量
