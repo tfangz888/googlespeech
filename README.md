@@ -78,7 +78,7 @@ en-US-Wavenet-F	FEMALE
   "sampleRateHertz": number,
 }
   
-在bash下把生成的txt文件转化为mp3文件  
+## 在bash下使用命令行把生成的txt文件转化为mp3文件  
 sed 's|audioContent| |' < synthesize-text.txt > tmp-output.txt && \
 tr -d '\n ":{}' < tmp-output.txt > tmp-output-2.txt && \
 base64 tmp-output-2.txt --decode > synthesize-text-audio.mp3 && \
