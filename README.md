@@ -1,4 +1,4 @@
-方法一. 利用 google的页面翻译，存成MP3. 不需要登录。
+方法一. 利用 google的页面翻译，存成MP3. 不需要登录。缺点是无法调速。
 googleTrans.js
 # googlespeech
 use google translation to record as MP3
